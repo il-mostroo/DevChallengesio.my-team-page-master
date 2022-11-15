@@ -24,6 +24,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+.section {
+  width: fit-content;
+  margin: 0 auto;
+}
 .section__header {
   font-size: var(--xl-font-size);
   font-family: var(--pt-serif);
@@ -31,7 +35,6 @@ body {
   color: var(--main-color);
   margin-top: 4.4375rem;
   margin-bottom: 2.375rem;
-  margin-left: 1.25rem;
 }
 .section__intro__header {
   font-size: var(--l-font-size);
@@ -39,32 +42,31 @@ body {
   font-weight: 600;
   color: var(--main-color);
   margin-bottom: 0.625rem;
-  margin-left: 1.25rem;
 }
 .section__intro__paragraph {
   font-size: clamp(0.875rem, 0.787rem + 0.376vw, 1.125rem);
   font-family: var(--poppins);
   font-weight: var(400);
   color: var(--main-color);
-  margin-bottom: 5.9375rem;
-  margin-left: 1.25rem;
-  margin-right: 1.875rem;
+  margin-bottom: 7rem;
+  width: 20.8125rem;
 }
 .team__member__image {
   width: clamp(8.625rem, 6.424rem + 9.39vw, 14.875rem);
 }
 .team {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, auto);
   row-gap: 4rem;
-  padding-left: 1.25rem;
+  justify-content: space-evenly;
+  max-width: 125rem;
 }
 .team__member {
   width: clamp(9.563rem, 7.208rem + 10.047vw, 16.25rem);
   position: relative;
 }
 .team__member:nth-child(odd) {
-  transform: translateY(-2.9375rem);
+  transform: translateY(-3rem);
 }
 .team__member__job {
   font-family: var(--pt-serif);
@@ -96,16 +98,41 @@ body {
   bottom: 1.5rem;
   left: calc(50% - 287px / 2);
 }
-/* body {
-  position: relative;
+@media screen and (min-width: 62.5rem) {
+  .section__header,
+  .section__intro__header,
+  .section__intro__paragraph {
+    margin: 0;
+  }
+  .section {
+    width: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 6.875rem;
+    margin-bottom: 5rem;
+  }
+  .section__intro__header {
+    margin-bottom: 0.625rem;
+  }
 }
-img {
-  width: 400px;
+@media screen and (min-width: 90rem) {
+  .team {
+    grid-template-columns: repeat(3, auto);
+    margin: 0 auto;
+  }
+
+  .section {
+    margin-bottom: 10rem;
+  }
+  .team__member__job {
+    left: 16.2rem;
+  }
+  .team__member:nth-child(odd) {
+    transform: translateY(0px);
+  }
+  .team__member:nth-child(2),
+  .team__member:nth-child(5) {
+    transform: translateY(6rem);
+  }
 }
-p {
-  position: absolute;
-  top: 0;
-  left: 430px;
-  transform-origin: top left;
-  transform: rotate(90deg);
-} */
