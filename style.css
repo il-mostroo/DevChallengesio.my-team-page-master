@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: hsla(0, 0%, 0%, 1);
+  --footer-color: hsla(0, 0%, 66%, 1);
+  --regular-font-size: 0.875rem;
+  --l-font-size: 1.125rem;
+  --xl-font-size: 2.25rem;
+  --montserrat: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --pt-serif: "PT Serif", serif;
+}
+body {
+  min-height: 100vh;
+  position: relative;
+}
+.section,
+.section__intro {
+  display: flex;
+  flex-direction: column;
+}
+.section__header {
+  font-size: var(--xl-font-size);
+  font-family: var(--pt-serif);
+  font-weight: 700;
+  color: var(--main-color);
+  margin-top: 4.4375rem;
+  margin-bottom: 2.375rem;
+  margin-left: 1.25rem;
+}
+.section__intro__header {
+  font-size: var(--l-font-size);
+  font-family: var(--poppins);
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 0.625rem;
+  margin-left: 1.25rem;
+}
+.section__intro__paragraph {
+  font-size: clamp(0.875rem, 0.787rem + 0.376vw, 1.125rem);
+  font-family: var(--poppins);
+  font-weight: var(400);
+  color: var(--main-color);
+  margin-bottom: 5.9375rem;
+  margin-left: 1.25rem;
+  margin-right: 1.875rem;
+}
+.team__member__image {
+  width: clamp(8.625rem, 6.424rem + 9.39vw, 14.875rem);
+}
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4rem;
+  padding-left: 1.25rem;
+}
+.team__member {
+  width: clamp(9.563rem, 7.208rem + 10.047vw, 16.25rem);
+  position: relative;
+}
+.team__member:nth-child(odd) {
+  transform: translateY(-2.9375rem);
+}
+.team__member__job {
+  font-family: var(--pt-serif);
+  font-size: clamp(0.625rem, 0.581rem + 0.188vw, 0.75rem);
+  font-weight: 400;
+  color: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: calc(7.208rem + 10.047vw);
+  transform-origin: top left;
+  transform: rotate(90deg);
+  width: 100%;
+}
+.team__member__name {
+  font-family: var(--poppins);
+  font-size: clamp(0.875rem, 0.787rem + 0.376vw, 1.125rem);
+  font-weight: 600;
+  color: var(--main-color);
+}
+.content-wrap {
+  padding-bottom: 9rem;
+}
+.footer {
+  font-family: var(--montserrat);
+  font-size: var(--regular-font-size);
+  font-weight: 700;
+  color: var(--footer-color);
+  position: absolute;
+  bottom: 1.5rem;
+  left: calc(50% - 287px / 2);
+}
+/* body {
+  position: relative;
+}
+img {
+  width: 400px;
+}
+p {
+  position: absolute;
+  top: 0;
+  left: 430px;
+  transform-origin: top left;
+  transform: rotate(90deg);
+} */
