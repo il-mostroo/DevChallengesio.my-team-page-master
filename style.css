@@ -135,4 +135,7 @@ body {
   .team__member:nth-child(5) {
     transform: translateY(6rem);
   }
+  .content-wrap {
+    padding-bottom: 20rem;
+  }
 }
